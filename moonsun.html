@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <style>
+            .upper{
+                width:100%;
+                height: 50%;
+                /* background-color: black; */
+                animation-name: upperani;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                /* animation-timing-function: ease-in; */
+
+            }
+            .lower{
+                width: 100%;
+                height: 50%;
+                /* background-color: orange; */
+                animation-name: lowerani;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                /* animation-timing-function: ease-in; */
+            }
+            .moon{
+                position: absolute; 
+                top:40%;
+                left:40%;
+                width:10%;
+                height: 20%;
+                border-radius: 100%;
+                /* box-shadow: 5px 5px 10px 10px black; */
+                background-color: white;
+                animation-name: sunmoonrotate;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                /* animation-timing-function: linear; */
+            }
+            .sun{
+                position: absolute;
+                top:40%;
+                left:40%;
+                width:10%;
+                height: 20%;
+                border-radius: 100%;
+                /* box-shadow: 5px 5px 10px 10px black; */
+                background-color: #F7C500;
+                 animation-name: sunmoonrotatee;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                /* animation-timing-function: linear; */
+            }
+            @keyframes sunmoonrotate{
+                0%{
+                    transform: rotate(0deg) translate(280px);
+                }
+                100%{
+                    transform: rotate(360deg) translate(280px);
+                }
+            }
+            @keyframes sunmoonrotatee{
+                0%{
+                    transform: rotate(0deg) translate(-280px);
+                }
+                100%{
+                    transform: rotate(360deg) translate(-280px);
+                }
+            }
+            @keyframes upperani{
+                0%{
+                    /* background-color: orange; */
+                    background: linear-gradient(to top,yellow,orange,red,black);
+                   
+                }
+                100%{
+                    /* background-color: black; */
+                    background: linear-gradient(to bottom,black 45%,rgb(117, 107, 107),rgb(161, 145, 145));
+                }
+            }
+            @keyframes lowerani{
+                0%{
+                    /* background-color: black; */
+                    background: linear-gradient(to top,black 45%,rgb(117, 107, 107),rgb(161, 145, 145));
+                  
+                }
+                100%{
+                   
+                    /* background-color: orange; */
+                    background: linear-gradient(to bottom,yellow,orange,red,black);
+                }
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="upper">
+            <div class="moon"></div>
+        </div>
+        <div class="lower">
+            <div class="sun"></div>
+        </div>
+    </body>
+</html>
